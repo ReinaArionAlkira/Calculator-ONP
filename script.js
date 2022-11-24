@@ -237,6 +237,10 @@ function onFactorizationClick() {
 }
 
 function onSumClick() {
+    if(parseFloat(currentValue) > 50000000){
+        result.innerText = "Za dużo";
+        return;
+    }
     const factors2 = [];
     let n = parseFloat(currentValue);
     for(var i = 3; i <= n/2 ; i++){
